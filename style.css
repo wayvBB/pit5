@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    height: 10vh; 
+    padding: 0 20px;
+}
+
+nav h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    color: red;
+}
+
+.upper-head {
+    background-color: white;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+}
+
+.container {
+    color: black;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(57, 75, 88);
+    margin: 0;
+    padding-top: 10vh;
+}
+
+.box {
+    background-color: white;
+    margin-top: 10vh;
+    height: 75vh;
+    width: 65vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-box {
+    height: 70vh;
+    width: 60vh;
+    position: relative;
+    background-color: white;
+    margin: 0 auto;
+
+}
+
+.inner-box h1 {
+    font-size: 1.4rem;
+    text-align: flex-start;
+    padding: 20px 20px;
+    color: rgb(57, 75, 88);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: -10px;
+}
+
+.inner-box p {
+    font-size: 0.8rem;
+    text-align: flex-start;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    color: rgb(57, 75, 88);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.index-form-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.form-group input {
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+.form-group.remember-me {
+    font-size: 0.8rem;
+}
+
+
+/*register form page*/
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    padding: 0 20px;
+}
+
+.form-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    margin-bottom: 7px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 105px;
+}
+
+.register-button {
+    background-color: #0374b5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 105px;
+}
+
+.index-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.index-register-button {
+    background-color: #0374b5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 105px;
+}
+
+.login-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 105px;
+}
+
+/*dashboard page*/
+
+.user-img {
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: rgb(57, 75, 88);
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sidebar.active ~ .main-content {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: white;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo {
+    opacity: 1;
+}
+
+.top .logo i {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+i.bx {
+    font-size: 24px;
+}
+
+.user {
+    display: flex;
+    align-items: center; 
+    margin: 1rem 0;
+}
+
+.user p {
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p {
+    opacity: 0;
+}
+
+.sidebar.active p {
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8 rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fff;
+    color: rgb(57, 75, 88);
+}
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.sidebar:not(.active) .nav-item {
+    opacity: 0;
+    color: rgb(57, 75, 88);
+    visibility: hidden;
+    pointer-events: none;
+    width: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.main-content {
+    position: relative;
+    background-color: #fff;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+
+.for_accounts {
+    background-color: grey;
+    color: white;
+    width: 100px;         /* Set a fixed width */
+    height: 100px;        /* Equal to width = square */
+    display: flex;        /* Center content */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;  /* Slight curve */
+    
+    margin: 10px 0 10px 20px;/* Optional: center horizontally */   
+    text-decoration: none;
+}
+
+.for_accounts a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.for_accounts i {
+    font-size: 24px; /* Optional: icon size */
+}
+
+.for_accounts {
+    color: white;
+    margin-top: 5px;
+}
+
+.for_students {
+    background-color: red;
+    color: white;
+    width: 100px;         /* Set a fixed width */
+    height: 100px;        /* Equal to width = square */
+    display: flex;        /* Center content */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;  /* Slight curve */
+    
+    margin: 10px 0 10px 20px;/* Optional: center horizontally */   
+    text-decoration: none;
+}
+
+.for_students a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.for_students i {
+    font-size: 24px; /* Optional: icon size */
+}
+
+.for_students {
+    color: white;
+    margin-top: 5px;
+}
+
+.for_enrollment {
+    background-color: blue;
+    color: white;
+    width: 100px;         /* Set a fixed width */
+    height: 100px;        /* Equal to width = square */
+    display: flex;        /* Center content */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;  /* Slight curve */
+    
+    margin: 10px 0 10px 20px;/* Optional: center horizontally */   
+    text-decoration: none;
+}
+
+.for_enrollment a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.for_enrollment i {
+    font-size: 24px; /* Optional: icon size */
+}
+
+.for_enrollment {
+    color: white;
+    margin-top: 5px;
+}
+
